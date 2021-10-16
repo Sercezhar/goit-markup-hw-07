@@ -353,8 +353,7 @@ img {
   margin-left: 30px;
 
   background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -396,8 +395,7 @@ img {
   color: #afb1b8;
   border-radius: 50%;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-member-socials-item a:hover,
@@ -473,8 +471,7 @@ img {
   border: none;
   padding: 6px 22px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -482,8 +479,7 @@ img {
 .filter-button:focus {
   color: #ffffff;
   background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .projects-list {
@@ -507,8 +503,7 @@ img {
 .projects-link:focus {
   display: block;
   box-sizing: border-box;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects-description {
@@ -702,8 +697,8 @@ img {
   border-radius: 4px;
   background-color: transparent;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sub-form input::placeholder {
@@ -788,8 +783,7 @@ img {
   height: 581px;
 
   background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 
@@ -837,7 +831,6 @@ img {
 }
 
 .form-field {
-  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -898,10 +891,16 @@ img {
   border-color: var(--accent-color);
 }
 
+.input-wrapper {
+  position: relative;
+  display: flex;
+}
+
 .form-field-icon {
   position: absolute;
-  top: 32px;
+  top: 50%;
   left: 15px;
+  transform: translateY(-50%);
 
   pointer-events: none;
 
@@ -913,11 +912,6 @@ img {
 .form-field input:focus + .form-field-icon {
   color: var(--accent-color);
   fill: var(--accent-color);
-}
-
-.checkbox {
-  appearance: none;
-  position: absolute;
 }
 
 .checkbox-label {
@@ -932,24 +926,33 @@ img {
   color: #757575;
 }
 
+.checkbox-input {
+  appearance: none;
+  position: absolute;
+}
+
 .checkbox-icon {
-  margin-right: 8px;
+  display: flex;
+  margin-right: 7px;
+  align-items: center;
+  justify-content: center;
 
-  fill: #212121;
+  width: 16px;
+  height: 15px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.checkbox:hover + .checkbox-icon,
-.checkbox:focus + .checkbox-icon{
-  fill: var(--accent-color);
-}
-
-.checkbox:checked + .checkbox-icon {
+  border: 2px solid #212121;
   border-radius: 2px;
 
-  fill: var(--accent-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-input:hover + .checkbox-icon,
+.checkbox-input:focus + .checkbox-icon {
+  border-color: var(--accent-color);
+}
+
+.checkbox-input:checked + .checkbox-icon {
+  border-color: var(--accent-color);
   background-color: var(--accent-color);
   background-image: url('../images/checkbox-check.svg');
   background-size: contain;
