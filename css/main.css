@@ -95,7 +95,7 @@ body {
   color: var(--accent-color);
 }
 
-.header-logo__studio {
+.header-logo__studio--black {
   color: #000000;
 }
 
@@ -125,11 +125,11 @@ body {
   color: var(--accent-color);
 }
 
-.current {
+.nav-list__link--current {
   color: var(--accent-color);
 }
 
-.current::after {
+.nav-list__link--current::after {
   content: '';
   display: block;
   position: absolute;
@@ -432,7 +432,7 @@ body {
   color: var(--accent-color);
 }
 
-.footer-contacts__studio {
+.footer-contacts__studio--white {
   color: #ffffff;
 }
 

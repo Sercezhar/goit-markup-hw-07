@@ -22,7 +22,7 @@
   line-height: 1.19;
   color: var(--accent-color);
 
-  &__studio {
+  &__studio--black {
     color: #000000;
   }
 }
@@ -56,7 +56,7 @@
   }
 }
 
-.current {
+.nav-list__link--current {
   color: var(--accent-color);
 
   &::after {
