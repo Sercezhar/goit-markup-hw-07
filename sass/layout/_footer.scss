@@ -4,10 +4,7 @@
   padding-bottom: 60px;
 
   &__wrapper {
-    display: flex;
-
-    align-items: baseline;
-    justify-content: space-between;
+    @include align-center(flex, baseline, space-between);
   }
 }
 
@@ -22,9 +19,7 @@
     margin-bottom: 20px;
 
     font-family: Raleway;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    @include font-style(700, 26px, 1.19, 0.03em);
     color: var(--accent-color);
   }
 
@@ -39,8 +34,7 @@
 
 .footer-contacts-list__street {
   font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
+  @include font-style(400, 14px, 1.71, 0.03em);
   color: #ffffff;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -53,8 +47,7 @@
 
 .footer-contacts-list__link {
   font-style: normal;
-  font-size: 14px;
-  line-height: 1.71px;
+  @include font-style(400, 14px, 1.71, 0.03em);
   color: rgba(255, 255, 255, 0.6);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -73,9 +66,7 @@
   &__title {
     margin-bottom: 20px;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+    @include font-style(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
     color: var(--primary-title-color);
   }
@@ -97,9 +88,7 @@
 }
 
 .footer-social-list__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include align-center(flex, center, center);
 
   width: 44px;
   height: 44px;
@@ -120,9 +109,7 @@
 .subscription-form__title {
   margin-bottom: 20px;
 
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font-style(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -151,8 +138,7 @@
   &::placeholder {
     align-items: center;
 
-    font-size: 16px;
-    line-height: 1.25;
+    @include font-style(400, 16px, 1.25, 0.03em);
     display: flex;
     color: rgba(255, 255, 255, 0.6);
   }
@@ -170,16 +156,12 @@
 }
 
 .subscription-form-btn {
+  @include align-center(flex, center, center);
+
   width: 200px;
   height: 50px;
 
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 0.06em;
+  @include font-style(700, 16px, 1.87, 0.06em);
   color: #ffffff;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

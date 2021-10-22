@@ -25,9 +25,7 @@
   &__title {
     margin-bottom: 10px;
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.18;
+    @include font-style(500, 16px, 1.18, 0.03em);
     text-align: center;
     color: var(--secondary-title-color);
   }
@@ -35,17 +33,14 @@
   &__position {
     margin-bottom: 16px;
 
-    font-size: 16px;
-    line-height: 1.18;
+    @include font-style(400, 16px, 1.18, 0.03em);
     text-align: center;
     color: var(--primary-text-color);
   }
 }
 
 .team-social-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include align-center(flex, center, center);
 
   &__icon {
     width: 20px;
@@ -56,9 +51,7 @@
 }
 
 .team-social-list__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include align-center(flex, center, center);
 
   width: 44px;
   height: 44px;

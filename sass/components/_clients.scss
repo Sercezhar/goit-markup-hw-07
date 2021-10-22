@@ -17,10 +17,7 @@
 }
 
 .clients-list__link {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
+  @include align-center(flex, center, center);
 
   width: 170px;
   height: 92px;
