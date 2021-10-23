@@ -760,11 +760,6 @@ body {
   color: #757575;
 }
 
-.checkbox-label__input {
-  appearance: none;
-  position: absolute;
-}
-
 .checkbox-label__link {
   color: var(--accent-color);
 }
